@@ -1,0 +1,28 @@
+# Prohall Burix One — A/B landing pages
+
+Static A/B landing pages for [Prohall Burix One](https://shop.prohall.ai/products/prohall-burix-one-organic-hair-protein-smoothing-treatment) on shop.prohall.ai, measured with Split.
+
+| Version | Path | Headline |
+|---|---|---|
+| A | `/burix-one/v1/a/` | Meet Burix One — one smoothing treatment, three finishes |
+| B | `/burix-one/v1/b/` | How to use Burix One for smooth, frizz-free hair |
+
+Both pages share `/burix-one/v1/assets/styles.css`; only the `<title>` and `<h1>` differ.
+
+## Live links (GitHub Pages)
+Settings → Pages → Source: **Deploy from a branch**, branch `main`, folder `/ (root)`.
+
+- A: https://farazghaffar.github.io/prohall-burix-one-landing/burix-one/v1/a/
+- B: https://farazghaffar.github.io/prohall-burix-one-landing/burix-one/v1/b/
+
+Keep the trailing slash.
+
+## Deploy (Vercel, optional)
+Import this repo → preset **Other**, no build command. URLs: `https://<project>.vercel.app/burix-one/v1/a/` and `/b/`.
+
+## Before starting a Split run
+1. Replace the placeholder `<script ... external-landing.js>` tag at the bottom of BOTH pages with the exact tag from Split → New run → Install tracking.
+2. The Shopify theme bridge (`split-tracking.js` + `split-tracking.liquid`) must be installed on the live theme.
+3. Never put raw page URLs in ads — use Split's generated links.
+
+For a redesign, add `/burix-one/v2/...` and start a new run; keep v1 unchanged.
