@@ -2,12 +2,14 @@
 
 Static A/B landing pages for [Prohall Burix One](https://shop.prohall.ai/products/prohall-burix-one-organic-hair-protein-smoothing-treatment) on shop.prohall.ai, measured with Split.
 
-| Version | Path | Headline |
-|---|---|---|
-| A | `/burix-one/v1/a/` | Meet Burix One — one smoothing treatment, three finishes |
-| B | `/burix-one/v1/b/` | How to use Burix One for smooth, frizz-free hair |
+**Test: layout.** Both versions use the same headline ("Meet Burix One — one smoothing treatment, three finishes"), copy, photos, price and buttons; only the design differs.
 
-Both pages share `/burix-one/v1/assets/styles.css`; only the `<title>` and `<h1>` differ.
+| Version | Path | Layout |
+|---|---|---|
+| A | `/burix-one/v1/a/` | Classic: split hero, card grids, dark ingredients band |
+| B | `/burix-one/v1/b/` | Editorial: centered arched hero, numbered lists, timeline, dark buy band |
+
+Both load `/burix-one/v1/assets/styles.css` (brand tokens + layout A); B also loads `styles-b.css`.
 
 ## Live links (GitHub Pages)
 Settings → Pages → Source: **Deploy from a branch**, branch `main`, folder `/ (root)`.
